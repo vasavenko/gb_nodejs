@@ -4,7 +4,7 @@ const [ num1, num2 ] = process.argv.slice(2)
 
 function getPrimes(num1, num2) {
 
-  if (!/\d+/gm.test(num1) || /[a-zA-Zа-яА-Я]+/gm.test(num1) || !/\d+/gm.test(num2) || /[a-zA-Zа-яА-Я]+/gm.test(num2)) {
+  if (!/\d+/gm.test(+num1) || !/\d+/gm.test(+num2)) {
     console.log(colors.red("Необходимо передать два числа"))
     return
   }
